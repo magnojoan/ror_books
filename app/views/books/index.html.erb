@@ -1,0 +1,36 @@
+<div id="wrapper">
+
+<div id="logo"><h1>Seohyun's Books</h1></div>
+<div id="menu"><%= link_to "Add Book", new_book_path %></div>
+&nbsp;
+<div id="content">
+<table>
+  <thead>
+    <tr>
+      <th>Book Name</th>
+      <th>Author</th>
+      <th>Date Published</th>
+      <th>ISBN Number</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.book_name %></td>
+        <td><%= book.author %></td>
+        <td><%= book.published_at %></td>
+        <td><%= book.isbn_number %></td>
+        <td><%= book.category %></td>
+        <td>
+          <%= link_to "Show", book_path(book) %>
+          <!--<%= link_to "Edit", edit_book_path(book) %>-->
+          <%= link_to "Delete", book_path(book), :confirm => "Are you sure?", :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<div id="footer">Copyright Joan Magno | March 4 2013</div>
+</div>

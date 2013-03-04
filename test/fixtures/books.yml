@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  book_name: MyString
+  author: MyString
+  published_at: 2013-03-04
+  isbn_number: MyString
+  category: 9.99
+
+two:
+  book_name: MyString
+  author: MyString
+  published_at: 2013-03-04
+  isbn_number: MyString
+  category: 9.99

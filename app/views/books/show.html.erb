@@ -1,0 +1,28 @@
+<div id="logo"><h1>Show</h1></div>
+<div id="sidebar"><h2><%= link_to "Back", books_path %></h2></div>
+&nbsp;
+<div id="content">
+<table>
+  <thead>
+    <tr>
+      <th>Book Name</th>
+      <th>Author</th>
+      <th>Date Published</th>
+      <th>ISBN Number</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <% book = @book %>
+        <td><%= book.book_name %></td>
+        <td><%= book.author %></td>
+        <td><%= book.published_at %></td>
+        <td><%= book.isbn_number %></td>
+        <td><%= book.category %></td>
+      </tr>
+  </tbody>
+</table>
+</div>
+<div id="footer">Copyright Joan Magno | March 4 2013</div>
+</div>

@@ -1,0 +1,33 @@
+<div id="logo"><h1>New Book</h1></div>
+<div id="sidebar"><h2><%= link_to "Back", books_path %></h2></div>
+&nbsp;
+<div id="content">
+<!--<%= render :partial => "form", :locals => { :book => @book } %>-->
+<%= form_tag(:controller => "books", :action => "create", :method => :post) do %>
+
+  <%= label_tag(:book_name, "Book Name:") %>
+  <%= text_field_tag(:book_name) %>
+  <br>
+
+  <%= label_tag(:author, "Author:") %>
+  <%= text_field_tag(:author) %>
+  <br>
+
+  <%= label_tag(:published_at, "Date Publishing:") %>
+  <%= select_date(Date.today, :prefix => :published_at) %>
+  <br>
+
+  <%= label_tag(:isbn_number, "ISBN Number:") %>
+  <%= text_field_tag(:isbn_number) %>
+  <br>
+
+  <%= label_tag(:category, "Category:") %>
+  <%= select_tag(:category, options_for_select(%w{ Horror Fiction Fantasy Pulp Adult Children })) %>
+  <br>
+  <%= submit_tag("Submit") %>
+
+<% end %>
+
+</div>
+<div id="footer">Copyright Joan Magno | March 4 2013</div>
+</div>
