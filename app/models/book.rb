@@ -1,5 +1,7 @@
 class Book < ActiveRecord::Base
-  attr_accessible :author, :book_name, :category, :isbn_number, :published_at
+  attr_accessible :author, :book_name, :category, :isbn_number, :published_at, :category_list
+
+  category_list = ["Historical"]
 
   validates :author, :presence => true, :uniqueness => true
 

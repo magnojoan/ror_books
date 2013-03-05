@@ -3,6 +3,6 @@
   <%= f.input :author, :label => "Author:" %>
   <%= f.input :published_at, :label => "Published at:" %>
   <%= f.input :isbn_number, :label => "ISBN Number:" %>
-  <%= f.input :category, :label => "Category:" %>
+  <%= f.input :category, :as => :select, :label => "Category:", :include_blank => false, :collection => ["Historical", "Fantasy", "Children's Book", "Young Adult"] %>  
   <%= f.submit "Submit" %>
 <% end %>

@@ -2,7 +2,11 @@
 <div id="sidebar"><h2><%= link_to "Back", books_path %></h2></div>
 &nbsp;
 <div id="content">
-<!--<%= render :partial => "form", :locals => { :book => @book } %>-->
+
+<!-- SIMPLE FORM MODE -->
+
+<%= render :partial => "form", :locals => { :book => @book } %>
+<!-- BRUTE FORCE MODE
 <%= form_tag(:controller => "books", :action => "create", :method => :post) do %>
 
   <%= label_tag(:book_name, "Book Name:") %>
@@ -23,8 +27,8 @@
 
   <%= label_tag(:category, "Category:") %>
   <%= select_tag(:category, options_for_select(%w{ Horror Fiction Fantasy Pulp Adult Children })) %>
-  <br>
-  <%= submit_tag("Submit") %>
+  <br> 
+  <%= submit_tag("Submit") %>-->
 
 <% end %>
 
